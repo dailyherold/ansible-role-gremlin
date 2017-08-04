@@ -10,5 +10,5 @@ gremlin_start_after_install: false
 gremlin_org_id: ""
 gremlin_org_secret: ""
 gremlin_service_name: ""
-gremlin_host_identier: "{{ ansible_hostname }}"
+gremlin_host_identifier: "{{ ansible_hostname }}"
 
