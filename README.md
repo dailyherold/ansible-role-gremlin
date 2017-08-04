@@ -14,13 +14,13 @@ Role Variables
 
 Variables and default values:
 
-- `gremlin-yum-repo-url`: http://rpm.gremlininc.com/gremlin.repo
-- `gremlin-docker-support`: false
-- `gremlin-org-id`: ""
-- `gremlin-org-secret`: ""
-- `gremlin-host-identifier`: ""
-- `gremlin-service-name`: ""
-- `gremlin-start-after-install`: false
+- `gremlin_yum_repo_url`: http://rpm.gremlininc.com/gremlin.repo
+- `gremlin_docker_support`: false
+- `gremlin_org_id`: ""
+- `gremlin_org_secret`: ""
+- `gremlin_host_identifier`: ""
+- `gremlin_service_name`: ""
+- `gremlin_start_after_install`: false
 
 Dependencies
 ------------

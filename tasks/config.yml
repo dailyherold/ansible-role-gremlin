@@ -7,7 +7,7 @@
     groups: docker
     name: gremlin
     state: present
-  when: gremlin-docker-support
+  when: gremlin_docker_support
 
 - name: Add login and configure script
   template:
@@ -17,4 +17,4 @@
 
 - name: Login and configure Gremlin
   shell: "su -c /tmp/gremlin-config -s /bin/bash gremlin > /tmp/gremlin-bootstrap.out 2>&1"
-  when: gremlin-start-after-install
+  when: gremlin_start_after_install
