@@ -13,7 +13,7 @@
   template:
     src: gremlin-config
     dest: /tmp
-    mode: a+x
+    mode: 0755
 
 - name: Login and configure Gremlin
   shell: "su -c /tmp/gremlin-config -s /bin/bash gremlin > /tmp/gremlin-bootstrap.out 2>&1"
