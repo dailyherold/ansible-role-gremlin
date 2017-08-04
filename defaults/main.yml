@@ -1,16 +1,14 @@
 ---
 # defaults file for gremlin
 
-# Install
+# Role variables
 gremlin_yum_repo_url: http://rpm.gremlininc.com/gremlin.repo
 gremlin_docker_support: false
+gremlin_start_after_install: false
 
-# Agent auth
+# Gremlin variables
 gremlin_org_id: ""
 gremlin_org_secret: ""
-
-# Agent configuration
-gremlin_host_identier: ""
 gremlin_service_name: ""
-gremlin_start_after_install: false
+gremlin_host_identier: "{{ ansible_hostname }}"
 
