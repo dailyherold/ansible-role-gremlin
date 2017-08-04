@@ -1,0 +1,20 @@
+---
+# config task file for gremlin
+
+- name: Add gremlin user to docker group
+  user:
+    append: yes
+    groups: docker
+    name: gremlin
+    state: present
+  when: gremlin-docker-support
+
+- name: Add login and configure script
+  template:
+    source: gremlin-config
+    dest: /tmp
+    mode: a+x
+
+- name: Login and configure Gremlin
+  shell: "su -c /tmp/gremlin-config -s /bin/bash gremlin > /tmp/gremlin-bootstrap.out 2>&1"
+  when: gremlin-start-after-install

@@ -1,2 +1,16 @@
 ---
 # defaults file for gremlin
+
+# Install
+gremlin-yum-repo-url: http://rpm.gremlininc.com/gremlin.repo
+gremlin-docker-support: false
+
+# Agent auth
+gremlin-org-id: ""
+gremlin-org-secret: ""
+
+# Agent configuration
+gremlin-host-identier: ""
+gremlin-service-name: ""
+gremlin-start-after-install: false
+

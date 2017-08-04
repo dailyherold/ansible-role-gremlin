@@ -1,2 +1,8 @@
 ---
 # tasks file for gremlin
+
+- name: Gremlin install tasks
+  include: install.yml
+
+- name: Gremlin config tasks
+  include: config.yml

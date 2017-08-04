@@ -1,0 +1,12 @@
+#!/bin/bash
+
+set -e
+
+# gremlin vars needed for login
+export GREMLIN_IDENTIFIER="{{ gremlin-host-identifier }}"
+export GREMLIN_ORG_ID="{{ gremlin-org-id }}"
+export GREMLIN_ORG_SECRET="{{ gremlin-org-secret }}"
+
+
+# login and configure
+gremlin config --login --service '{{ gremlin-service-name }}'
