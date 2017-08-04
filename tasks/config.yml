@@ -11,7 +11,7 @@
 
 - name: Add login and configure script
   template:
-    source: gremlin-config
+    src: gremlin-config
     dest: /tmp
     mode: a+x
 
