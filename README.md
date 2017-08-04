@@ -6,8 +6,8 @@ Ansible role to install [Gremlin Inc](https://gremlininc.com/)'s agent on Linux 
 Requirements
 ------------
 
-- Ansible 2.3.1.0 or newer
-- Gremlin API key
+- Ansible 2.3.1.0 (older versions yet to be tested)
+- Gremlin account with organization ID and secret key
 
 Role Variables and Default Values
 --------------
@@ -33,14 +33,16 @@ Example Playbook
     # Example passing in org ID and secret as role variables
     - hosts: servers
       roles:
-         - { role: gremlin, gremlin_org_id: 1234-1234-1234, gremlin_org_secret: 1zk8jansk3729lz7, gremlin_service_name: api }
+         - { role: gremlin, gremlin_org_id: foo, gremlin_org_secret: bar, gremlin_service_name: api }
 
-    # This example you could pass in the org ID and secret via Ansible's `-e`/`--extra-vars` at runtime
+    # This example you could pass in the org ID and secret via Ansible's --extra-vars at runtime
+    # Also an example of overriding gremlin_host_identifer with a command that would be helpful if running in AWS and you're using this role with Packer's Ansible provisioner
     - hosts: servers
       roles:
         - role: examsoft-gremlin
           gremlin_docker_support: true
           gremlin_service_name: reporting
+          gremlin_host_identifier: "$(curl http://169.254.169.254/latest/meta-data/instance-id)"
 
 
 Contribution
