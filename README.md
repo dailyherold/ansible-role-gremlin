@@ -12,7 +12,7 @@ Requirements
 Role Variables and Default Values
 --------------
 
-- `gremlin_yum_repo_url=http://rpm.gremlininc.com/gremlin.repo`: url for Gremlin yum repo.
+- `gremlin_yum_repo_url=https://rpm.gremlininc.com/gremlin.repo`: url for Gremlin yum repo.
 - `gremlin_docker_support=false`: adds gremlin user to docker group if `true`, Docker is therefore a dependency with this enabled.
 - `gremlin_start_after_install=false`: runs the login and configure script during role execution if `true`. `false` is recommended if you are baking Gremlin using [Packer](https://www.packer.io/).
 - `gremlin_org_id=""`: Gremlin organization ID.

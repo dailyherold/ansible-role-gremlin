@@ -3,7 +3,7 @@
 
 - name: Add Gremlin repo
   get_url:
-    url: http://rpm.gremlininc.com/gremlin.repo
+    url: https://rpm.gremlininc.com/gremlin.repo
     dest: /etc/yum.repos.d/gremlin.repo
 
 - name: Install Gremlin
