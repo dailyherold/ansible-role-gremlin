@@ -2,6 +2,8 @@
 
 set -e
 
+[ ! -z $1 ] && service_name="{{ gremlin_service_name }}-$1" || service_name="{{ gremlin_service_name }}"
+
 # gremlin vars needed for login
 export GREMLIN_IDENTIFIER="{{ gremlin_host_identifier }}"
 export GREMLIN_ORG_ID="{{ gremlin_org_id }}"
@@ -9,4 +11,4 @@ export GREMLIN_ORG_SECRET="{{ gremlin_org_secret }}"
 
 
 # login and configure
-gremlin config --login --service '{{ gremlin_service_name }}'
+gremlin config --login --service "$service_name"
