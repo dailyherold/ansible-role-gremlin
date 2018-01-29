@@ -11,4 +11,4 @@ export GREMLIN_ORG_SECRET="{{ gremlin_org_secret }}"
 
 
 # login and configure
-gremlin config --login --service "$service_name"
+gremlin init --service "$service_name"
